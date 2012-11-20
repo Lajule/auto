@@ -1,0 +1,13 @@
+#!/bin/ksh
+
+# Print the position form the beginning of given character in given string.
+function index {
+  let index=-1
+
+  typeset -r str=${1%%$2*}
+  if [[ $1 != $str ]]; then
+    let index=${#str}
+  fi
+
+  print - $index
+}

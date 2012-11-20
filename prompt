@@ -1,0 +1,26 @@
+#!/bin/ksh
+
+# Set a pretty prompt.
+function prompt {
+  typeset -r mode=${1:-simple}
+  case $mode in
+    tiny)
+      export PS1="$ ";;
+
+    simple)
+      export PS1="$LOGNAME@$(hostname) $ ";;
+
+    full)
+      set -A dirs $(print $PWD | sed 's/\// /g')
+      if ((${#dirs[*]} > 5)); then
+        typeset pwd=".."
+        for i in 5 4 3 2 1; do
+          typeset pwd="$pwd/${dirs[$((${#dirs[*]} - $i))]}"
+        done
+      fi
+
+      export PS1="
+$LOGNAME@$(hostname):${pwd:-$PWD}
+! $(date +%H:%M:%S) $ ";;
+  esac
+}

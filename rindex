@@ -1,0 +1,13 @@
+#!/bin/ksh
+
+# Print the position form the end of given character in given string.
+function rindex {
+  let rindex=-1
+
+  typeset -r str=${1##*$2}
+  if [[ $1 != $str ]]; then
+    let rindex=${#str}
+  fi
+
+  print - $rindex
+}

@@ -1,0 +1,9 @@
+#!/bin/ksh
+
+# Anormal termination.
+function die {
+  let failure=1
+
+  print -u2 - "${0##*/}: $*"
+  exit $failure
+}

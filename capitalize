@@ -1,0 +1,9 @@
+#!/bin/ksh
+
+# Capitalize the given string.
+function capitalize {
+  typeset -r str=$*
+  typeset -ru cap=${str%${str#[a-z]}}
+
+  print - "$cap${str#[a-z]}"
+}

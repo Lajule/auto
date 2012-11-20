@@ -1,0 +1,25 @@
+#!/bin/ksh
+
+# Convert spaces into tabs.
+function tabify {
+  typeset tab="  "
+
+  while getopts "24" opt; do
+    case $opt in
+      2)
+        typeset -rL2 tab;;
+
+      4)
+        typeset -rL4 tab;;
+    esac
+  done
+  shift $(($OPTIND - 1))
+
+  typeset -r tmp=/tmp/tabify.$$
+  for f in $@; do
+    if [[ -f $f ]]; then
+      sed "s/$tab/	/g" $f >$tmp
+      mv $tmp $f
+    fi
+  done
+}

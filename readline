@@ -1,0 +1,20 @@
+#!/bin/ksh
+
+# Read a line and store the result in given variable name.
+function readline {
+  if [[ -t 0 ]]; then
+    if [[ -z $stty ]]; then
+      stty=$(stty -g)
+    fi
+
+    if [[ $1 = password ]]; then
+      stty -echo
+    fi
+  fi
+
+  read ${1:-line}
+
+  if [[ -t 0 ]]; then
+    stty $stty
+  fi
+}

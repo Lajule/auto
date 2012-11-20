@@ -1,0 +1,11 @@
+#!/bin/ksh
+
+# Replace the last occurrence of given pattern.
+function rsub {
+  case $1 in
+    *$2*)
+      print - "${1%$2*}$3${1##*$2}";;
+    *)
+      print - "$1";;
+  esac
+}

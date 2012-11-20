@@ -1,0 +1,13 @@
+#!/bin/ksh
+
+# Convert a unix file to a dos file.
+function unix2dos {
+  typeset -r tmp=/tmp/unix2dos.$$
+
+  for f in $@; do
+    if [[ -f $f ]]; then
+      sed 's/$/\r/g' $f >$tmp
+      mv $tmp $f
+    fi
+  done
+}

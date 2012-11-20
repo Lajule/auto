@@ -1,0 +1,23 @@
+#!/bin/ksh
+
+# Insert a new entry in log file.
+function log {
+  typeset -r d=${LOGDIR:-.}
+  typeset -r f=${0##*/}.$(date '+%Y%m%d').log
+
+  if [[ -n $LOGSIZE ]]; then
+    if [[ -f $d/$f ]]; then
+      if (( $(cat $d/$f | wc -l) > $LOGSIZE )); then
+        let n=$(find $d -type f -name "$f.*" | wc -l | tr -d '[:blank:]')+1
+        mv $d/$f $d/$f.$n
+      fi
+    fi
+  fi
+
+  let level=$1
+  shift
+
+  if (( $level <= ${LOGLEVEL:-0} )); then
+    print "$(date '+%Y%m%d%H%M%S') [$level] : $$ : $*" >>$d/$f
+  fi
+}

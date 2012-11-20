@@ -1,0 +1,10 @@
+#!/bin/ksh
+
+# Return a new temporary file name.
+function mktmpf {
+  typeset -r d=${TMPDIR:-/tmp}
+  typeset -r f=${0##*/}.$$
+
+  let n=$(find $d -type f -name "$f.*" | wc -l | tr -d '[:blank:]')+1
+  print "$d/$f.$n"
+}

@@ -1,0 +1,9 @@
+#!/bin/ksh
+
+# Normal termination.
+function bye {
+  let success=0
+
+  print - "${0##*/}: $*"
+  exit $success
+}

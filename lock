@@ -1,0 +1,37 @@
+#!/bin/ksh
+
+# The default lock file name is build here.
+typeset -r LOCKFILE="$0.lock"
+
+# Return one if a previous instance is running, else return zero.
+function lock {
+  typeset -r tempfile="$LOCKFILE.$$"
+
+  if ! print $$ >$tempfile; then
+    return 1
+  fi
+
+  if ln -n $tempfile $LOCKFILE 2>/dev/null; then
+    rm -f $tempfile
+    return 0
+  fi
+
+  if kill -0 $(cat $LOCKFILE); then
+    rm -f $tempfile
+    return 1
+  fi
+
+  rm -f $LOCKFILE
+  if ln -n $tempfile $LOCKFILE 2>/dev/null; then
+    rm -f $tempfile
+    return 0
+  fi
+
+  rm -f $tempfile
+  return 1
+}
+
+# Release lock for others instances.
+function unlock {
+  rm -f $LOCKFILE
+}

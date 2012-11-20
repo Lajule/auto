@@ -1,0 +1,18 @@
+#!/bin/ksh
+
+# Read the pressed key and store the result in given variable name.
+function readkey {
+  if [[ -t 0 ]]; then
+    if [[ -z $stty ]]; then
+      stty=$(stty -g)
+    fi
+
+    stty -echo -icanon min 1
+  fi
+
+  eval ${1:-key}=$(dd bs=1 count=1 2>/dev/null)
+
+  if [[ -t 0 ]]; then
+    stty $stty
+  fi
+}

@@ -1,0 +1,26 @@
+#!/bin/ksh
+
+# Push a value into a stack.
+function push {
+  if [[ -n $2 ]]; then
+    eval $1="\"\$$1:$2\""
+  fi
+}
+
+# Pop the first value from a stack.
+function pop {
+  set -A values $(eval print \"\$$1\" | sed 's/:/ /g')
+
+  if (( ${#values[*]} > 0 )); then
+    eval $2=\"\${$1##*:}\"
+    eval $1=\"\${$1%:*}\"
+  fi
+
+  return $((${#values[*]} <= 0))
+}
+
+# Get the number of elements in a stack.
+function size {
+  set -A values $(eval print \"\$$1\" | sed 's/:/ /g')
+  print ${#values[*]}
+}

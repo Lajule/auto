@@ -1,0 +1,12 @@
+#!/bin/ksh
+
+# Right pad the given string with given character.
+function pad {
+  typeset str=$1
+
+  while (( ${#str} < ${2:-0} )); do
+    str="${3:- }$str"
+  done
+
+  print - "$str"
+}
