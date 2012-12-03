@@ -1,10 +1,10 @@
 auto
 ====
 
-A collection of Korn Shell functions.
+You may find something of interest here, if you use the Korn Shell.
 
 ## Installation
 
-Paste following line in your .profile
+Paste following line in your `.profile'
 
-`export FPATH=$FPATH:<Path to this directory>`
+  export FPATH=$FPATH:<Path to this directory>
