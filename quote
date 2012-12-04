@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Quote the given string.
+# Quotes the given string.
 function quote {
   print "\`$*'"
 }

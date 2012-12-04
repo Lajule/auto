@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Read the pressed key and store the result in given variable name.
+# Reads the pressed key and stores the result in given variable name.
 function readkey {
   if [[ -t 0 ]]; then
     if [[ -z $stty ]]; then

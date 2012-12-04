@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Replace the last occurrence of given pattern.
+# Replaces the last occurrence of given pattern.
 function rsub {
   case $1 in
     *$2*)

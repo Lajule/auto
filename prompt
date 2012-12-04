@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Set a pretty prompt.
+# Sets a pretty prompt.
 function prompt {
   typeset -r mode=${1:-simple}
   case $mode in

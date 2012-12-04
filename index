@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Print the position form the beginning of given character in given string.
+# Prints the position (form the beginning) of given character in given string.
 function index {
   let index=-1
 

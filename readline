@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Read a line and store the result in given variable name.
+# Reads a line and stores the result in given variable name.
 function readline {
   if [[ -t 0 ]]; then
     if [[ -z $stty ]]; then

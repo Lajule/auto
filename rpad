@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Left pad the given string with given character.
+# Left pads the given string with given character.
 function rpad {
   typeset str=$1
 

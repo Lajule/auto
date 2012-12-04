@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Convert spaces into tabs.
+# Converts spaces into tabs.
 function tabify {
   typeset tab="  "
 

@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Print the position form the end of given character in given string.
+# Prints the position (form the end) of given character in given string.
 function rindex {
   let rindex=-1
 

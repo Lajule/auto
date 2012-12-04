@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Convert tabs into spaces.
+# Converts tabs into spaces.
 function untabify {
   typeset tab="  "
 

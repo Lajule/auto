@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Return a new temporary file name.
+# Returns a new temporary file name.
 function mktmpf {
   typeset -r d=${TMPDIR:-/tmp}
   typeset -r f=${0##*/}.$$
