@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Replaces the first occurrence of given pattern.
+# Replaces the first occurence of given pattern.
 function sub {
   case $1 in
     *$2*)
