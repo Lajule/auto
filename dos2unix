@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-# Converts a dos file to an unix one.
+# Converts a dos file to a unix one.
 function dos2unix {
   typeset -r tmp=/tmp/dos2unix.$$
 
