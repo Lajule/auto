@@ -1,4 +1,10 @@
 #!/bin/ksh
+#         __            __      __
+#        / /  ___      / /_  __/ /  ____
+#       / /  / _ |_   / / / / / /  / __/     auto
+#      / /__/ __ | \_/ / /_/ / /__/ -__      2012, Julien Rouzieres
+#     /____/_/ |_|\___/|____/____/____/      https://github.com/Lajule/auto
+#
 
 # Capitalizes the given string.
 function capitalize {
