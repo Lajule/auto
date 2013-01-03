@@ -1,9 +1,9 @@
 #!/bin/ksh
-#         __         _______    __
-#        / /  ___   /__  __/ __/ /  ____
-#       / /  / _ |_   / / / / / /  / __/     auto
-#      / /__/ __ | \_/ / /_/ / /__/ -__      2012, Julien Rouzieres
-#     /____/_/ |_|\___/|____/____/____/      https://github.com/Lajule/auto
+#         __          _______    __
+#        / /  ___    /__  __/ __/ /  ____
+#       / /  / _ | __  / / / / / /  / __/        auto
+#      / /__/ __ |/ /_/ / /_/ / /__/ -__         2012, Julien Rouzieres
+#     /____/_/ |_|\____/|____/____/____/         https://github.com/Lajule/auto
 #
 
 # Returns a new temporary file name.
