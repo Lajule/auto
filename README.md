@@ -8,7 +8,7 @@ Paste the following line in your ".profile":
 export FPATH=$FPATH:<Path to this directory>
 ```
 
-### in hello.ksh
+In hello.ksh:
 
 ```ksh
 #!/bin/ksh
