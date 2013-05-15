@@ -12,5 +12,5 @@ In "hello.ksh":
 
 ```ksh
 #!/bin/ksh
-capitalize "hello world !"
+bye "hello world !"
 ```
