@@ -1,5 +1,20 @@
 You may find something of interest here if you use the Korn Shell.
 
+## Using in your script
+
+Paste the following line in your ".profile":
+
+```ksh
+export FPATH=$FPATH:<Path to this directory>
+```
+
+In "hello.ksh":
+
+```ksh
+#!/bin/ksh
+bye "hello world !"
+```
+
 ## Contents
 
 `bye`: Normal termination.  
@@ -26,18 +41,3 @@ You may find something of interest here if you use the Korn Shell.
 `tabify`: Converts spaces into tabs.  
 `unix2dos`: Converts a unix file to a dos one.  
 `untabify`: Converts tabs into spaces.  
-
-## Using in your script
-
-Paste the following line in your ".profile":
-
-```ksh
-export FPATH=$FPATH:<Path to this directory>
-```
-
-In "hello.ksh":
-
-```ksh
-#!/bin/ksh
-bye "hello world !"
-```
