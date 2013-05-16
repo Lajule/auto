@@ -1,7 +1,7 @@
 You may find something of interest here if you use the Korn Shell.
 
 * `bye`: Normal termination.
-* `capitaliz: Capitalizes the given string.
+* `capitalize`: Capitalizes the given string.
 * `die`: Anormal termination.
 * `dos2unix`: Converts a dos file to a unix one.
 * `index`: Prints the position (form the beginning) of given character in given string.
