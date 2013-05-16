@@ -1,0 +1,10 @@
+#!/bin/ksh
+
+# Documents a file.
+function doc {
+  for f in $@; do
+    if [[ -f $f ]]; then
+
+    fi
+  done
+}
