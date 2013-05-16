@@ -2,5 +2,19 @@
 
 # Quotes the given string.
 function quote {
-  print "\`$*'"
+  typeset -r type=$1
+
+  shift
+  case $type in
+    gnu)
+      print - "\`$*'";;
+    single)
+      print - "'$*'";;
+    double)
+      print - "\"$*\"";;
+    back)
+      print - "\`$*\`";;
+    *)
+      print - "\`$type'";;
+  esac
 }
