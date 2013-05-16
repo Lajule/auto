@@ -24,7 +24,7 @@ You may find something of interest here if you use the Korn Shell.
 `rsub`: Replaces the last occurence of given pattern.  
 `sub`: Replaces the first occurence of given pattern.  
 `tabify`: Converts spaces into tabs.  
-`unix2dos`: Converts a unix file to a DOS one.  
+`unix2dos`: Converts a unix file to a dos one.  
 `untabify`: Converts tabs into spaces.  
 
 ## Using in your script
