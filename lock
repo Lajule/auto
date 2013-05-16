@@ -1,5 +1,7 @@
 #!/bin/ksh
-LOCKFILE="$0.lock"
+
+# Define the program name.
+typeset progname=$0.lock
 
 # Returns 1 if a previous instance is running, otherwise returns 0.
 function lock {
