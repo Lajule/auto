@@ -1,28 +1,28 @@
 #!/bin/ksh
 
-# Define the program name.
-typeset progname=$0.lock
+# Define the lock filename.
+typeset lockfile=$0.lock
 
 # Returns 1 if a previous instance is running, otherwise returns 0.
 function lock {
-  typeset -r tempfile="$LOCKFILE.$$"
+  typeset -r tempfile=$lockfile.$$
 
   if ! print $$ >$tempfile; then
     return 1
   fi
 
-  if ln -n $tempfile $LOCKFILE 2>/dev/null; then
+  if ln -n $tempfile $lockfile 2>/dev/null; then
     rm -f $tempfile
     return 0
   fi
 
-  if kill -0 $(cat $LOCKFILE); then
+  if kill -0 $(cat $lockfile); then
     rm -f $tempfile
     return 1
   fi
 
-  rm -f $LOCKFILE
-  if ln -n $tempfile $LOCKFILE 2>/dev/null; then
+  rm -f $lockfile
+  if ln -n $tempfile $lockfile 2>/dev/null; then
     rm -f $tempfile
     return 0
   fi
@@ -33,5 +33,5 @@ function lock {
 
 # Releases lock for others instances.
 function unlock {
-  rm -f $LOCKFILE
+  rm -f $lockfile
 }
