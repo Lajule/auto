@@ -1,7 +1,5 @@
 #!/bin/ksh
-
-# The default lock file name is built here.
-typeset -r LOCKFILE="$0.lock"
+LOCKFILE="$0.lock"
 
 # Returns 1 if a previous instance is running, otherwise returns 0.
 function lock {

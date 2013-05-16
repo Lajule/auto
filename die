@@ -1,9 +1,10 @@
 #!/bin/ksh
+CALLER=${0##*/}
 
 # Anormal termination.
 function die {
   let failure=1
 
-  print -u2 - "${0##*/}: $*"
+  print -u2 - "$CALLER: $*"
   exit $failure
 }
