@@ -1,12 +1,12 @@
 #!/bin/ksh
 
-# Define the program name.
-typeset progname=${0##*/}
+# Define the calling script name.
+typeset scriptname=${0##*/}
 
 # Normal termination.
 function bye {
   let success=0
 
-  print - "$progname: $*"
+  print - "$scriptname: $*"
   exit $success
 }

@@ -1,12 +1,12 @@
 #!/bin/ksh
 
-# Define the program name.
-typeset progname=${0##*/}
+# Define the calling script name.
+typeset scriptname=${0##*/}
 
 # Inserts a new entry in log file.
 function log {
   typeset -r d=${LOGDIR:-.}
-  typeset -r f=$progname.$(date '+%Y%m%d').log
+  typeset -r f=$scriptname.$(date '+%Y%m%d').log
 
   if [[ -n $LOGSIZE ]]; then
     if [[ -f $d/$f ]]; then

@@ -1,12 +1,12 @@
 #!/bin/ksh
 
-# Define the program name.
-typeset progname=${0##*/}
+# Define the calling script name.
+typeset scriptname=${0##*/}
 
 # Returns a new temporary file name.
 function mktmpf {
   typeset -r d=${TMPDIR:-/tmp}
-  typeset -r f=$progname.$$
+  typeset -r f=$scriptname.$$
 
   let n=$(find $d -type f -name "$f.*" | wc -l | tr -d '[:blank:]')+1
   print "$d/$f.$n"

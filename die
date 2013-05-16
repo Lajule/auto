@@ -1,12 +1,12 @@
 #!/bin/ksh
 
-# Define the program name.
-typeset progname=${0##*/}
+# Define the calling script name.
+typeset scriptname=${0##*/}
 
 # Anormal termination.
 function die {
   let failure=1
 
-  print -u2 - "$progname: $*"
+  print -u2 - "$scriptname: $*"
   exit $failure
 }
