@@ -1,10 +1,12 @@
 #!/bin/ksh
-CALLER=${0##*/}
+
+# Define the program name.
+typeset progname=${0##*/}
 
 # Normal termination.
 function bye {
   let success=0
 
-  print - "$CALLER: $*"
+  print - "$progname: $*"
   exit $success
 }
