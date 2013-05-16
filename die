@@ -1,10 +1,12 @@
 #!/bin/ksh
-CALLER=${0##*/}
+
+# Define the program name.
+typeset progname=${0##*/}
 
 # Anormal termination.
 function die {
   let failure=1
 
-  print -u2 - "$CALLER: $*"
+  print -u2 - "$progname: $*"
   exit $failure
 }
