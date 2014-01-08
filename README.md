@@ -12,7 +12,7 @@ In "hello.ksh":
 
 ```ksh
 #!/bin/ksh
-bye "hello world !"
+bye hello world
 ```
 
 ## Contents
