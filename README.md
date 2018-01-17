@@ -1,3 +1,5 @@
+# auto
+
 You may find something of interest here if you use the Korn Shell.
 
 ## Using in your script
