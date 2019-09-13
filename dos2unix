@@ -4,7 +4,7 @@
 function dos2unix {
   typeset -r tmp=/tmp/dos2unix.$$
 
-  for f in $@; do
+  for f in "$@"; do
     if [[ -f $f ]]; then
       tr -d '\r' <$f >$tmp
       mv $tmp $f

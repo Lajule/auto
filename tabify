@@ -16,7 +16,7 @@ function tabify {
   shift $(($OPTIND - 1))
 
   typeset -r tmp=/tmp/tabify.$$
-  for f in $@; do
+  for f in "$@"; do
     if [[ -f $f ]]; then
       sed "s/$tab/	/g" $f >$tmp
       mv $tmp $f
