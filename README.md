@@ -24,7 +24,7 @@ Function | Description
 bye | Normal termination
 capitalize | Capitalizes the given string
 die | Anormal termination
-dos2unix | Converts a dos file to a unix one
+dos2unix | Converts a DOS file to a UNIX one
 index | Prints the position (form the beginning) of given character in given string
 lock | Returns 1 if a previous instance is running, otherwise returns 0
 unlock | Releases lock for others instances
@@ -43,5 +43,5 @@ rpad | Left pads the given string with given character
 rsub | Replaces the last occurence of given pattern
 sub | Replaces the first occurence of given pattern
 tabify | Converts spaces into tabs
-unix2dos | Converts a unix file to a dos one
+unix2dos | Converts a UNIX file to a DOS one
 untabify | Converts tabs into spaces
